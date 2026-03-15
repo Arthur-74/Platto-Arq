@@ -573,6 +573,7 @@ const defaultData = {
         password: 'platto2024'
     },
     hero: {
+        isVisible: true,
         label: 'ARQUITETURA & DESIGN DE INTERIORES',
         title1: 'Espaços que',
         title2: 'contam histórias.',
@@ -582,45 +583,62 @@ const defaultData = {
         btn2: 'Conheça o Escritório'
     },
     sobre: {
+        isVisible: true,
         title: 'Uma visão além do espaço',
         p1: 'Na Plattô Arquitetura, acreditamos que cada espaço possui uma vocação única. Nosso trabalho é descobrir essa essência e traduzi-la em formas, texturas e luz.',
         p2: 'Com mais de 10 anos de mercado, nosso escritório se consolidou na criação de projetos residenciais e comerciais de alto padrão, sempre guiados pela atemporalidade e pelo conforto.',
         signature: 'Plattô Arquitetura'
     },
-    contadores: [
-        { id: 1, label: 'Projetos de Interiores', value: 124 },
-        { id: 2, label: 'Projetos Residenciais', value: 86 },
-        { id: 3, label: 'Projetos Comerciais', value: 42 },
-        { id: 4, label: 'Anos de Atuação', value: 12 }
-    ],
-    projetos: [
-        { id: 1, title: 'Casa Horizonte', category: 'Residencial', year: '2023', area: '450m²', desc: 'Uma residência concebida para integrar a paisagem externa à rotina familiar.', color: 'linear-gradient(145deg, #1c1c1c, #0a0a0a)' },
-        { id: 2, title: 'Loft Botânico', category: 'Interiores', year: '2024', area: '120m²', desc: 'Apartamento com conceito aberto e uso extensivo de materiais naturais.', color: 'linear-gradient(145deg, #2a2a2a, #111111)' },
-        { id: 3, title: 'Galeria M', category: 'Comercial', year: '2023', area: '300m²', desc: 'Espaço minimalista para exposição de arte contemporânea.', color: 'linear-gradient(145deg, #1f1f1f, #0d0d0d)' },
-        { id: 4, title: 'Apartamento Neo', category: 'Interiores', year: '2022', area: '180m²', desc: 'Reforma completa focada em iluminação e texturas.', color: 'linear-gradient(145deg, #222222, #050505)' },
-        { id: 5, title: 'Sede FinTech', category: 'Comercial', year: '2024', area: '800m²', desc: 'Escritório corporativo com foco em bem-estar.', color: 'linear-gradient(145deg, #333333, #1a1a1a)' },
-        { id: 6, title: 'Vila Flora', category: 'Residencial', year: '2021', area: '600m²', desc: 'Conjunto de casas de campo com arquitetura vernacular.', color: 'linear-gradient(145deg, #2c2c2c, #0a0a0a)' }
-    ],
-    servicos: [
-        { id: 1, title: 'Arquitetura Residencial', desc: 'Projetos completos do zero, focados em conforto e durabilidade.' },
-        { id: 2, title: 'Design de Interiores', desc: 'Conceituação e detalhamento de ambientes internos, mobiliário e iluminação.' },
-        { id: 3, title: 'Arquitetura Comercial', desc: 'Espaços de varejo e corporativos que traduzem a identidade da marca.' },
-        { id: 4, title: 'Consultoria e Reforma', desc: 'Intervenções otimizadas para renovar e valorizar imóveis existentes.' },
-        { id: 5, title: 'Paisagismo', desc: 'Integração da natureza à arquitetura, criando refúgios urbanos.' }
-    ],
-    processo: [
-        { id: 1, title: 'Briefing & Escuta', desc: 'Entendemos profundamente seus desejos, necessidades e rotina.' },
-        { id: 2, title: 'Conceito & Referências', desc: 'Apresentação do partido arquitetônico e moodboards visuais.' },
-        { id: 3, title: 'Desenvolvimento do Projeto', desc: 'Detalhamento técnico completo de todas as disciplinas envolvidas.' },
-        { id: 4, title: 'Execução & Acompanhamento', desc: 'Visitas técnicas à obra para garantir a fidelidade do projeto.' },
-        { id: 5, title: 'Entrega & Pós-obra', desc: 'Finalização impecável e suporte para sua completa adaptação.' }
-    ],
-    depoimentos: [
-        { id: 1, text: 'A Plattô transformou nossa forma de viver. O apartamento reflete exatamente quem somos, mas com uma sofisticação que não conseguiríamos sozinhos.', author: 'Marina Silva', city: 'São Paulo/SP' },
-        { id: 2, text: 'Profissionalismo do começo ao fim. Cumpriram todos os prazos e o resultado comercial superou as expectativas dos nossos clientes.', author: 'Carlos Mendes', city: 'Campinas/SP' },
-        { id: 3, text: 'O processo foi leve e surpreendente. Eles entenderam nosso estilo de vida e desenharam a casa dos nossos sonhos.', author: 'Família Costa', city: 'Belo Horizonte/MG' }
-    ],
+    contadores: {
+        isVisible: true,
+        items: [
+            { id: 1, label: 'Projetos de Interiores', value: 124 },
+            { id: 2, label: 'Projetos Residenciais', value: 86 },
+            { id: 3, label: 'Projetos Comerciais', value: 42 },
+            { id: 4, label: 'Anos de Atuação', value: 12 }
+        ]
+    },
+    projetos: {
+        isVisible: true,
+        items: [
+            { id: 1, title: 'Casa Horizonte', category: 'Residencial', year: '2023', area: '450m²', desc: 'Uma residência concebida para integrar a paisagem externa à rotina familiar.', color: 'linear-gradient(145deg, #1c1c1c, #0a0a0a)' },
+            { id: 2, title: 'Loft Botânico', category: 'Interiores', year: '2024', area: '120m²', desc: 'Apartamento com conceito aberto e uso extensivo de materiais naturais.', color: 'linear-gradient(145deg, #2a2a2a, #111111)' },
+            { id: 3, title: 'Galeria M', category: 'Comercial', year: '2023', area: '300m²', desc: 'Espaço minimalista para exposição de arte contemporânea.', color: 'linear-gradient(145deg, #1f1f1f, #0d0d0d)' },
+            { id: 4, title: 'Apartamento Neo', category: 'Interiores', year: '2022', area: '180m²', desc: 'Reforma completa focada em iluminação e texturas.', color: 'linear-gradient(145deg, #222222, #050505)' },
+            { id: 5, title: 'Sede FinTech', category: 'Comercial', year: '2024', area: '800m²', desc: 'Escritório corporativo com foco em bem-estar.', color: 'linear-gradient(145deg, #333333, #1a1a1a)' },
+            { id: 6, title: 'Vila Flora', category: 'Residencial', year: '2021', area: '600m²', desc: 'Conjunto de casas de campo com arquitetura vernacular.', color: 'linear-gradient(145deg, #2c2c2c, #0a0a0a)' }
+        ]
+    },
+    servicos: {
+        isVisible: true,
+        items: [
+            { id: 1, title: 'Arquitetura Residencial', desc: 'Projetos completos do zero, focados em conforto e durabilidade.' },
+            { id: 2, title: 'Design de Interiores', desc: 'Conceituação e detalhamento de ambientes internos, mobiliário e iluminação.' },
+            { id: 3, title: 'Arquitetura Comercial', desc: 'Espaços de varejo e corporativos que traduzem a identidade da marca.' },
+            { id: 4, title: 'Consultoria e Reforma', desc: 'Intervenções otimizadas para renovar e valorizar imóveis existentes.' },
+            { id: 5, title: 'Paisagismo', desc: 'Integração da natureza à arquitetura, criando refúgios urbanos.' }
+        ]
+    },
+    processo: {
+        isVisible: true,
+        items: [
+            { id: 1, title: 'Briefing & Escuta', desc: 'Entendemos profundamente seus desejos, necessidades e rotina.' },
+            { id: 2, title: 'Conceito & Referências', desc: 'Apresentação do partido arquitetônico e moodboards visuais.' },
+            { id: 3, title: 'Desenvolvimento do Projeto', desc: 'Detalhamento técnico completo de todas as disciplinas envolvidas.' },
+            { id: 4, title: 'Execução & Acompanhamento', desc: 'Visitas técnicas à obra para garantir a fidelidade do projeto.' },
+            { id: 5, title: 'Entrega & Pós-obra', desc: 'Finalização impecável e suporte para sua completa adaptação.' }
+        ]
+    },
+    depoimentos: {
+        isVisible: true,
+        items: [
+            { id: 1, text: 'A Plattô transformou nossa forma de viver. O apartamento reflete exatamente quem somos, mas com uma sofisticação que não conseguiríamos sozinhos.', author: 'Marina Silva', city: 'São Paulo/SP' },
+            { id: 2, text: 'Profissionalismo do começo ao fim. Cumpriram todos os prazos e o resultado comercial superou as expectativas dos nossos clientes.', author: 'Carlos Mendes', city: 'Campinas/SP' },
+            { id: 3, text: 'O processo foi leve e surpreendente. Eles entenderam nosso estilo de vida e desenharam a casa dos nossos sonhos.', author: 'Família Costa', city: 'Belo Horizonte/MG' }
+        ]
+    },
     contato: {
+        isVisible: true,
         whatsapp: '(11) 99999-9999',
         telefone: '(11) 3333-3333',
         email: 'contato@platto.com.br',
@@ -630,6 +648,28 @@ const defaultData = {
 };
 
 let siteData = JSON.parse(localStorage.getItem('plattoData')) || defaultData;
+
+// Migration logic: Handle arrays converted to objects with .isVisible and .items
+function migrateArraysToObjects() {
+    const listSections = ['contadores', 'projetos', 'servicos', 'processo', 'depoimentos'];
+    listSections.forEach(section => {
+        if (Array.isArray(siteData[section])) {
+            siteData[section] = {
+                isVisible: true,
+                items: siteData[section]
+            };
+        }
+    });
+
+    const configSections = ['hero', 'sobre', 'contato'];
+    configSections.forEach(section => {
+        if (typeof siteData[section].isVisible === 'undefined') {
+            siteData[section].isVisible = true;
+        }
+    });
+}
+migrateArraysToObjects();
+
 let hasUnsavedChanges = false;
 
 // === SVG ICONS ===
@@ -658,6 +698,16 @@ function renderSite() {
     document.querySelector('.footer-logo').innerText = siteData.config.name.split(' ')[0] || 'PLATTÔ';
     document.getElementById('footer-slogan').innerText = siteData.config.slogan;
     document.getElementById('current-year').innerText = new Date().getFullYear();
+
+    // Section visibility
+    document.getElementById('hero').style.display = siteData.hero.isVisible ? 'flex' : 'none';
+    document.getElementById('sobre').style.display = siteData.sobre.isVisible ? 'block' : 'none';
+    document.getElementById('contadores').style.display = siteData.contadores.isVisible ? 'block' : 'none';
+    document.getElementById('projetos').style.display = siteData.projetos.isVisible ? 'block' : 'none';
+    document.getElementById('servicos').style.display = siteData.servicos.isVisible ? 'block' : 'none';
+    document.getElementById('processo').style.display = siteData.processo.isVisible ? 'block' : 'none';
+    document.getElementById('depoimentos').style.display = siteData.depoimentos.isVisible ? 'block' : 'none';
+    document.getElementById('contato').style.display = siteData.contato.isVisible ? 'block' : 'none';
 
     // Hero
     document.getElementById('hero-label').innerText = siteData.hero.label;
@@ -696,7 +746,7 @@ function renderSite() {
 
     // Contadores
     const ctContainer = document.getElementById('contadores-container');
-    ctContainer.innerHTML = siteData.contadores.map(c => `
+    ctContainer.innerHTML = siteData.contadores.items.map(c => `
         <div class="counter-item reveal">
             <div class="counter-line"></div>
             <div class="counter-number" data-target="${c.value}">0</div>
@@ -709,7 +759,7 @@ function renderSite() {
 
     // Serviços
     const servContainer = document.getElementById('servicos-list');
-    servContainer.innerHTML = siteData.servicos.map((s, i) => `
+    servContainer.innerHTML = siteData.servicos.items.map((s, i) => `
         <div class="servico-item reveal delay-1 hoverable">
             <h3 class="servico-title">${getServiceIcon(i)} ${s.title}</h3>
             <p class="servico-desc">${s.desc}</p>
@@ -718,7 +768,7 @@ function renderSite() {
 
     // Processo
     const procContainer = document.getElementById('processo-timeline');
-    procContainer.innerHTML = siteData.processo.map((p, i) => `
+    procContainer.innerHTML = siteData.processo.items.map((p, i) => `
         <div class="timeline-item reveal delay-${i%3}">
             <div class="timeline-num">0${i+1}</div>
             <h4 class="timeline-title">${p.title}</h4>
@@ -728,7 +778,7 @@ function renderSite() {
 
     // Depoimentos
     const depContainer = document.getElementById('depoimentos-slider');
-    depContainer.innerHTML = siteData.depoimentos.map((d, i) => `
+    depContainer.innerHTML = siteData.depoimentos.items.map((d, i) => `
         <div class="slide ${i===0?'active':''}">
             <div class="quote-icon">"</div>
             <p class="quote-text">${d.text}</p>
@@ -759,7 +809,7 @@ function renderSite() {
 
 function renderProjetos(filter = 'all') {
     const grid = document.getElementById('projetos-grid');
-    const filtered = filter === 'all' ? siteData.projetos : siteData.projetos.filter(p => p.category === filter);
+    const filtered = filter === 'all' ? siteData.projetos.items : siteData.projetos.items.filter(p => p.category === filter);
     
     grid.innerHTML = filtered.map((p, i) => `
         <div class="projeto-card hoverable reveal delay-${i%3}" onclick="openProjectModal(${p.id})">
@@ -859,7 +909,7 @@ document.querySelector('.modal-close').addEventListener('click', () => modal.cla
 modal.addEventListener('click', e => { if (e.target.classList.contains('modal-overlay')) modal.classList.remove('active'); });
 
 window.openProjectModal = function(id) {
-    const proj = siteData.projetos.find(p => p.id === id);
+    const proj = siteData.projetos.items.find(p => p.id === id);
     if(!proj) return;
     
     modalBody.innerHTML = `
@@ -973,7 +1023,13 @@ function renderAdminForms() {
         <!-- HERO -->
         <div id="admin-hero" class="admin-section active">
             <div class="admin-card">
-                <h4>Hero - Cabeçalho</h4>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Hero - Cabeçalho</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.hero.isVisible ? 'checked' : ''} onchange="updateData('hero', 'isVisible', this.checked)">
+                    </label>
+                </div>
                 <div class="form-group">
                     <label>Imagem de Fundo</label>
                     <input type="file" accept="image/*" onChange="handleImageUpload(event, 'hero', 'bgImage')" style="margin-top: 5px; padding: 0.5rem 0; border: none;">
@@ -1001,7 +1057,13 @@ function renderAdminForms() {
         <!-- SOBRE -->
         <div id="admin-sobre" class="admin-section">
             <div class="admin-card">
-                <h4>Sobre o Escritório</h4>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Sobre o Escritório</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.sobre.isVisible ? 'checked' : ''} onchange="updateData('sobre', 'isVisible', this.checked)">
+                    </label>
+                </div>
                 <div class="form-group">
                     <label>Imagem 1 (Principal)</label>
                     <input type="file" accept="image/*" onChange="handleImageUpload(event, 'sobre', 'img1')" style="margin-top: 5px; padding: 0.5rem 0; border: none;">
@@ -1034,8 +1096,14 @@ function renderAdminForms() {
         <!-- CONTADORES -->
         <div id="admin-contadores" class="admin-section">
             <div class="admin-card">
-                <h4>Estatísticas (Contadores)</h4>
-                ${siteData.contadores.map((c, i) => `
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Estatísticas (Contadores)</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.contadores.isVisible ? 'checked' : ''} onchange="updateData('contadores', 'isVisible', this.checked)">
+                    </label>
+                </div>
+                ${siteData.contadores.items.map((c, i) => `
                     <div style="display:flex; gap:1rem; margin-bottom:1rem;">
                         <input type="text" value="${c.label}" onInput="updateArr('contadores', ${i}, 'label', this.value)">
                         <input type="number" value="${c.value}" onInput="updateArr('contadores', ${i}, 'value', this.value)">
@@ -1047,7 +1115,13 @@ function renderAdminForms() {
         <!-- PROJETOS -->
         <div id="admin-projetos" class="admin-section">
             <div class="admin-card">
-                <h4>Projetos do Portfólio</h4>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Projetos do Portfólio</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.projetos.isVisible ? 'checked' : ''} onchange="updateData('projetos', 'isVisible', this.checked)">
+                    </label>
+                </div>
                 <button class="btn btn-outline w-100" style="margin-bottom: 2rem;" onclick="addNewProject()">+ Adicionar Novo Projeto</button>
                 <div class="item-list" id="admin-proj-list">
                     ${adminListProjetos()}
@@ -1058,8 +1132,14 @@ function renderAdminForms() {
         <!-- SERVIÇOS -->
         <div id="admin-servicos" class="admin-section">
             <div class="admin-card">
-                <h4>Serviços</h4>
-                ${siteData.servicos.map((s, i) => `
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Serviços</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.servicos.isVisible ? 'checked' : ''} onchange="updateData('servicos', 'isVisible', this.checked)">
+                    </label>
+                </div>
+                ${siteData.servicos.items.map((s, i) => `
                     <div class="form-group" style="margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--color-border)">
                         <input type="text" style="margin-bottom:0.5rem" value="${s.title}" onInput="updateArr('servicos', ${i}, 'title', this.value)">
                         <textarea onInput="updateArr('servicos', ${i}, 'desc', this.value)">${s.desc}</textarea>
@@ -1071,8 +1151,14 @@ function renderAdminForms() {
         <!-- PROCESSO -->
         <div id="admin-processos" class="admin-section">
             <div class="admin-card">
-                <h4>Processo de Trabalho</h4>
-                ${siteData.processo.map((p, i) => `
+                 <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Processo de Trabalho</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.processo.isVisible ? 'checked' : ''} onchange="updateData('processo', 'isVisible', this.checked)">
+                    </label>
+                </div>
+                ${siteData.processo.items.map((p, i) => `
                     <div class="form-group" style="margin-bottom:1.5rem">
                         <label>Etapa ${i+1}</label>
                         <input type="text" style="margin-bottom:0.5rem" value="${p.title}" onInput="updateArr('processo', ${i}, 'title', this.value)">
@@ -1085,8 +1171,14 @@ function renderAdminForms() {
         <!-- DEPOIMENTOS -->
         <div id="admin-depoimentos" class="admin-section">
             <div class="admin-card">
-                <h4>Depoimentos</h4>
-                ${siteData.depoimentos.map((d, i) => `
+                 <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Depoimentos</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.depoimentos.isVisible ? 'checked' : ''} onchange="updateData('depoimentos', 'isVisible', this.checked)">
+                    </label>
+                </div>
+                ${siteData.depoimentos.items.map((d, i) => `
                     <div class="form-group" style="margin-bottom:2rem; border-bottom:1px solid var(--color-border); padding-bottom:1rem">
                         <textarea style="margin-bottom:0.5rem" onInput="updateArr('depoimentos', ${i}, 'text', this.value)">${d.text}</textarea>
                         <div style="display:flex; gap:1rem;">
@@ -1101,7 +1193,13 @@ function renderAdminForms() {
         <!-- CONTATO/CONFIG -->
         <div id="admin-contato" class="admin-section">
             <div class="admin-card">
-                <h4>Informações de Contato</h4>
+                 <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="margin:0; border:none; padding:0;">Informações de Contato</h4>
+                    <label style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; font-family:var(--font-label);">
+                        Exibir Seção: 
+                        <input type="checkbox" ${siteData.contato.isVisible ? 'checked' : ''} onchange="updateData('contato', 'isVisible', this.checked)">
+                    </label>
+                </div>
                 <div class="form-group"><label>WhatsApp</label><input type="text" value="${siteData.contato.whatsapp}" onInput="updateData('contato', 'whatsapp', this.value)"></div>
                 <div class="form-group"><label>Telefone</label><input type="text" value="${siteData.contato.telefone}" onInput="updateData('contato', 'telefone', this.value)"></div>
                 <div class="form-group"><label>Email</label><input type="text" value="${siteData.contato.email}" onInput="updateData('contato', 'email', this.value)"></div>
@@ -1124,7 +1222,7 @@ window.toggleProjectForm = function(i) {
     renderAdminForms();
 };
 window.addNewProject = function() {
-    siteData.projetos.unshift({
+    siteData.projetos.items.unshift({
         id: Date.now(),
         title: 'Novo Projeto',
         category: 'Residencial',
@@ -1140,7 +1238,7 @@ window.addNewProject = function() {
 };
 window.removeProject = function(i) {
     if (confirm('Tem certeza que deseja remover este projeto?')) {
-        siteData.projetos.splice(i, 1);
+        siteData.projetos.items.splice(i, 1);
         if (openProjectFormIndex === i) openProjectFormIndex = null;
         markUnsaved();
         renderAdminForms();
@@ -1148,7 +1246,7 @@ window.removeProject = function(i) {
 };
 
 function adminListProjetos() {
-    return siteData.projetos.map((p, i) => `
+    return siteData.projetos.items.map((p, i) => `
         <div class="list-item" style="flex-direction: column; align-items: stretch; gap: 1rem;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
                 <div class="list-item-content">
@@ -1218,7 +1316,7 @@ window.updateData = function(section, field, value) {
 };
 
 window.updateArr = function(section, index, field, value) {
-    siteData[section][index][field] = value;
+    siteData[section].items[index][field] = value;
     markUnsaved();
 };
 
